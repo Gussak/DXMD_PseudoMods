@@ -3,6 +3,7 @@
 : ${bDebug:=false} #help
 : ${nClipLim:=25} #help
 : ${nSlowDownLimMult:=3} #help
+: ${nMultSoft:=10} #help multiply the found software final amount to compensate how many you spent to make the effort worth it. So if you have high hacking skills better set this to 1
 
 echo "This script will randomize softwares you could have found in game if it could be modded properly ;)"
 echo "This script is a mini-game on it-self also."
@@ -28,7 +29,7 @@ function FUNCfixRegex() {
 	echo "$@" |sed -r -e 's@.@[&]@g'
 }
 
-astrList=( #this is the order found in debug menu mod
+astrSoftwareList=( #this is the order found in debug menu mod
 	Reveal    #0
 	Stealth   #1
 	Nuke      #2
@@ -36,6 +37,14 @@ astrList=( #this is the order found in debug menu mod
 	Datascan  #4
 	Stop      #5
 );
+
+declare -A aKey #TODO may be selecting a password beggining with the letter below, will prefer rewarding related software
+aKey[Reveal]=R
+aKey[Stealth]=S
+aKey[Nuke]=N
+aKey[Overclock]=O
+aKey[Datascan]=D
+aKey[Stop]=T
 
 _strEscGreenLight="\E[92m"
 _strEscGreen="\E[32m"
@@ -84,19 +93,19 @@ function FUNCrandomSoftwares() {
 			elif((nLuck == -1));then
 				nRnd=0; # 0=Reveal is the least powerful software
 			else
-				nRnd=$((RANDOM%${#astrList[@]}));
+				nRnd=$((RANDOM%${#astrSoftwareList[@]}));
 			fi
-			strFUNCrandomSoftwares+="${strEscGreen}$((i)): ${astrList[nRnd]}${_strEscEnd}\n";
+			strFUNCrandomSoftwares+="${strEscGreen}$((i)): ${astrSoftwareList[nRnd]}${_strEscEnd}\n";
 		fi
-		((aMatches[${astrList[nRnd]}]++))&&:
+		((aMatches[${astrSoftwareList[nRnd]}]++))&&:
 	done;
 	echo -e "${strEscGreen}$strFUNCrandomSoftwares${_strEscEnd}"
 	echo -e "${strEscGreen}Easier to click:${_strEscEnd}"
-	for str in ${astrList[@]};do
-		#nMatchCount="$(echo -e "$strFUNCrandomSoftwares" |egrep -ic "$str")" #grep is slow
+	for strSoft in ${astrSoftwareList[@]};do
+		#nMatchCount="$(echo -e "$strFUNCrandomSoftwares" |egrep -ic "$strSoft")" #grep is slow
 		#if((nMatchCount>0));then
-		if((${aMatches[$str]}>0));then
-			echo -e "${strEscGreen} $str: ${strEscGreenLight}${aMatches[$str]}${_strEscEnd}"
+		if((${aMatches[$strSoft]}>0));then
+			echo -e "${strEscGreen} $strSoft: ${strEscGreenLight}$(( ${aMatches[$strSoft]}*((RANDOM%nMultSoft)+1) ))${_strEscEnd}"
 		else
 			echo -e "${strEscGreenDim} [***]${_strEscEnd}"
 		fi
