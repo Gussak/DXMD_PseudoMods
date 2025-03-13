@@ -1,0 +1,13 @@
+ Q:how to fix keybinding for throwing objects in DeusEX:MD? after I customized it, it stops working, what is wrong? how to fix it?
+ A:no need to reset to defaults, the throw object hotkey IS NOT CONFIGURABLE!!! It will always be the key configured to fire weapons.
+ TODO: confirm if your version is the latest as it may have been fixed in the latest!
+ 
+ Q:how to reload game faster?
+ A:exit to the main menu before reloading the savegame. Exiting the game app and re-running it may be faster too! As soon reaching main menu hit Enter 2x.
+ 
+ Q:jump key stopped working! what now?
+ A:focus another app, and go back to DXMD.
+ 
+ Q:LMB behaviour is weird in menus, how to fix?
+ A:assign it to nothing, so it will work great in menus but not for anything else in game, what is not a real problem.
+ 

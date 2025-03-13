@@ -1,0 +1,39 @@
+NPC INTERACTION
+- Let we give credits to beggars, their reaction could be to give like 25experience, or let them just thanks, or unlock access to someone in the sewers side quest.
+
+ITEMS INTERACTION
+- pick up items hightlight should have 3 choices: 0-nothing, 1-only consumables, 2-everything. Also, consumables should be highlighted in another color like yellow or custom. So many highlighted items in white is annoying.
+- pickupable items highlight should be configurable to be less annoying/disrupting the marvelous game visuals, I would use grey or may be dark red color to not disturb the vision.
+- all pickupable items should have HP, so we would not be able to use a trash bin as powerful supreme high tech shield against a ceiling turret. So metal items should have like from 5x to 10x more HP than wooden, but not be indestructible!!!
+
+INVENTORY
+- guns are thin, not bulky, so a sniper rifle with of 3, with non optional height of 2, shall be considered as 6 inv slots. based on that, a pistol shall be only 2 slots, so h2w1 (2 slots). a combat rifle can be h2w2 (4 slots). grenade launcher is bulky tho 2x4. All ammo boxes should be 1x1 slots only. WORKAROUND: So, in the end, as we cant access all width values, a way to workaround that and compensate for the other items is to make small everything that we can, so all weapons that were possible became h2w1, ugly but is what happens when we have no modding tools :P. TIP: after apply the values, to let the binary editor update the shown values, just re-open the file, no need to close it.
+
+COMBAT
+- items on the environment, like big cardboxes or anything that a firearm could destroy should be destructible, so we would not be able to use as cover. Ok, the idea could be cardboxes may contain something strong inside, but some of them, or other things may be fragile.
+
+NAVIGATION
+- optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
+
+HACKING
+- configurable data storage credits and software rewards. lvl 5 should be 5x more than lvl1 nodes, so from 100 to 500 credits and from 1 to 5 softwares, 5x more xp WORKAROUND in the shell script DXMD_randomSoftwareReward.sh (*1)
+
+ENVIRONMENT
+- take damage if we step over any fire or any heat source, even the ones we can turn on/off like electric ovens. An open microwave oven if turned on should be a hazard.
+
+
+=======================================
+
+MOD: Fair and balanced gameplay INSTRUCTIONS
+
+Why "instructions"? because we do not have tools to mod DeusEx properly. We can tweak binary files that fortunately are uncompressed, so there is still hope to modding but it is very difficult (to me at least) to guess the right byte offset to tweak, very time consuming too to make tests. TODO: May be try with Cheat Engine?
+These instructions/tips are how to play more satisfactorily in several ways.
+It is balance towards maximum proper difficulty "Give me Deus Ex", because I dont have time to replay everything in "one life" mode...
+
+COMBAT:
+- If you reach a place that enemies can't reach you, it may probably be absolutely no challenge to combat them. In that case, reload and combat them where they can reach you.
+
+BALANCE: You will need to install Debug Menu mod to properly balance the game while you play it.
+- IMHO, to hacking minigame be fun, rewards should balanced and more rewarding (*1).
+ + if you fail a hack attempt, explode an FIRE grenade on your feet. If you disconnect after the trace begins, throw and EMP grenade. Better face a wall first as we cant aim straight down to throw them.
+ 
