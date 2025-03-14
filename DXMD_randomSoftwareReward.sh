@@ -129,6 +129,10 @@ function FUNCluckCheck() {
 : ${strFunChars:="${strFunJackPotRegexMatch}"'abcdefghijklmnopqrstuvwxyz 0123456789~!@#$%^&*()_+-={}<>[],./?'} #help
 strFunJackPotRegexMatchFIXEDREGEX="$(FUNCfixRegex "$strFunJackPotRegexMatch")"
 
+: ${strEndNowKey:='\'} #help use this key character to stop imediately instead of waiting for a luckier result
+declare -p strEndNowKey
+if [[ "$strFunChars" =~ .*[${strEndNowKey}].* ]];then echo "ERROR: invalid CFG key '$strEndNowKey', it must not be present in '$strFunChars'";exit 1;fi
+
 strSessionStartTime=$(date +'%Y/%m/%d-%H:%M:%S')
 nSessionRequest=1
 : ${bDebugTestLuck:=false} #help
@@ -245,7 +249,7 @@ while true;do
 		
 		strFunCurrentChar="${strFunChars:$((RANDOM%${#strFunChars})):1}"
 		strFunProgress+="$strFunCurrentChar"
-		echo -e "${strEscGreen}PASSWORD[${nLuckAdd}/${#strClipboard}]: '${strClipboard}' ${strEscGreenLight}${strTryType}${strPasswordStatus}"
+		echo -e "${strEscGreen}PASSWORD[${nLuckAdd}/${#strClipboard}]: '${strClipboard}' ${strEscGreenLight}${strTryType}${strPasswordStatus} ${strEscGreenDim}(press '$strEndNowKey' to end now)"
 		echo -e "${strEscGreen}DECRIPTING DATABASE [timeout:$((SECONDS-nSeconds+1))s/${nFunWayTimeout}s][slowdowns:$nSlowDownCount/$nSlowDownLim]:${strEscGreen} [${#strFunProgress}]='${strFunCurrentChar}' ${strEscGreenDim}$strFunProgress${_strEscEnd}";
 		
 		if [[ "$strFunProgress" =~ (${strFunJackPotRegexMatch}) ]];then
@@ -265,7 +269,8 @@ while true;do
 		
 		if ((nReadInputCountUp >= nReadInputLoopInterval));then
 			if ! $bPasswordCompleted && ! $bPasswordWrong;then
-				echo -n .;read -n 1 -t 0.001 strTryTypeChars >/dev/null;FUNCclearBuffer # will read the first char from the buffer!!! Must be the last thing to not break the above fast text printing. the user must type it and not paste so clear the buffer ;)
+				echo -n .;read -r -n 1 -t 0.001 strTryTypeChars >/dev/null;FUNCclearBuffer # will read the first char from the buffer!!! Must be the last thing to not break the above fast text printing. the user must type it and not paste so clear the buffer ;)
+				if [[ "$strTryTypeChars" == "${strEndNowKey}" ]];then break;fi
 				if(( nSlowDownCount < nSlowDownLim ));then
 					bSkipMouseMove=false
 					if [[ -z "$strCursorPos" ]];then bSkipMouseMove=true;fi #first only
@@ -273,7 +278,7 @@ while true;do
 					strCursorPos="$(xdotool getmouselocation)"
 					if ! $bSkipMouseMove && [[ "$strCursorPos" != "$strCursorPosPrevious" ]];then
 						echo -e "${strEscGreen}[Mouse Moved] System slow down..."
-						read -n 1 -t $nSysSlowDownDelay strTryTypeCharOnSlowDown;FUNCclearBuffer
+						read -r -n 1 -t $nSysSlowDownDelay strTryTypeCharOnSlowDown;FUNCclearBuffer
 						if [[ -n "$strTryTypeCharOnSlowDown" ]];then
 							strTryTypeChars+="$strTryTypeCharOnSlowDown"
 						fi

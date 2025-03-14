@@ -20,7 +20,7 @@ HACKING
 
 ENVIRONMENT
 - take damage if we step over any fire or any heat source, even the ones we can turn on/off like electric ovens. An open microwave oven if turned on should be a hazard.
-
+- double click the zoom in iron sights key while wielding no weapons, could eagle eye zoom like best sniper rifle scope (may be less :))
 
 =======================================
 
