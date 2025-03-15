@@ -1,3 +1,5 @@
+If there was proper mod tools, many of these could be easily implemented :)
+
 NPC INTERACTION
 - Let we give credits to beggars, their reaction could be to give like 25experience, or let them just thanks, or unlock access to someone in the sewers side quest.
 
@@ -11,6 +13,7 @@ INVENTORY
 
 COMBAT
 - items on the environment, like big cardboxes or anything that a firearm could destroy should be destructible, so we would not be able to use as cover. Ok, the idea could be cardboxes may contain something strong inside, but some of them, or other things may be fragile.
+- regenerating health should consume battery energy the same amount and prevent batt regen for a short time as if a skill had been used
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.

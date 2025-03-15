@@ -12,5 +12,5 @@
  A:assign it to nothing, so it will work great in menus but not for anything else in game, what is not a real problem.
  
  Q:unable to holster my gun?
- A:fire once with a silenced one.
+ A:move away from where you are standing, some places prevent that like +- in front of the Bank...
  

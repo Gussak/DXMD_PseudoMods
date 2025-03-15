@@ -15,8 +15,8 @@ declare -p fMinFreqDetected
 : ${fMinFreq:=${fMinFreqDetected}} #help your cpu minimum frequency (auto detected, but must be configured with visudo)
 while true;do
 	nTmpr=$(sensors |grep Tctl |awk '{print $2}' |cut -d. -f1);
-	: ${nTmprLim:=72} #help temperature limit to throttle CPU down
-	if((nTmpr > nTmprLim));then
+	: ${nTmprLim:=73} #help temperature limit to throttle CPU down
+	if((nTmpr >= nTmprLim));then
 		date
 		declare -p nTmpr
 		set -x

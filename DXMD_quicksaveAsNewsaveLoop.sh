@@ -21,6 +21,9 @@ while true;do
 		nLast=$nNew
 		strPrevStat="${strNewStat}"
 	fi
+	
 	echoc -n -w -t 5 "\r$(date)"
-	if ! FUNCcheckIfGameIsRunning;then break;fi
+	
+	: ${bExitWithGame:=false} #help keep off if you restart it often for any reason
+	if $bExitWithGame && ! FUNCcheckIfGameIsRunning;then break;fi
 done
