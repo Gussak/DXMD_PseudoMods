@@ -22,7 +22,9 @@ while true;do
 		strPrevStat="${strNewStat}"
 	fi
 	
-	echoc -n -w -t 5 "\r$(date)"
+	#echoc -n -w -t 5 "\r$(date)"
+	: ${nDelay:=5} #help
+	echo -en "\r$(date)";read -n 1 -t $nDelay
 	
 	: ${bExitWithGame:=false} #help keep off if you restart it often for any reason
 	if $bExitWithGame && ! FUNCcheckIfGameIsRunning;then break;fi

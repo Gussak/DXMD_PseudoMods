@@ -7,6 +7,7 @@ ITEMS INTERACTION
 - pick up items hightlight should have 3 choices: 0-nothing, 1-only consumables, 2-everything. Also, consumables should be highlighted in another color like yellow or custom. So many highlighted items in white is annoying.
 - pickupable items highlight should be configurable to be less annoying/disrupting the marvelous game visuals, I would use grey or may be dark red color to not disturb the vision.
 - all pickupable items should have HP, so we would not be able to use a trash bin as powerful supreme high tech shield against a ceiling turret. So metal items should have like from 5x to 10x more HP than wooden, but not be indestructible!!!
+- when picking up a gun you already have, it should auto disassemble it to avoid having to drop our gun, pick it up, disassemble and pick up back our upgraded gun (*3)
 
 INVENTORY
 - guns are thin, not bulky, so a sniper rifle with of 3, with non optional height of 2, shall be considered as 6 inv slots. based on that, a pistol shall be only 2 slots, so h2w1 (2 slots). a combat rifle can be h2w2 (4 slots). grenade launcher is bulky tho 2x4. All ammo boxes should be 1x1 slots only. WORKAROUND: So, in the end, as we cant access all width values, a way to workaround that and compensate for the other items is to make small everything that we can, so all weapons that were possible became h2w1, ugly but is what happens when we have no modding tools :P. TIP: after apply the values, to let the binary editor update the shown values, just re-open the file, no need to close it.
@@ -14,6 +15,7 @@ INVENTORY
 COMBAT
 - items on the environment, like big cardboxes or anything that a firearm could destroy should be destructible, so we would not be able to use as cover. Ok, the idea could be cardboxes may contain something strong inside, but some of them, or other things may be fragile.
 - regenerating health should consume battery energy the same amount and prevent batt regen for a short time as if a skill had been used
+- let grenade launcher ammo be converted into related grenades, so we dont need to carry the launcher but will still be able to use it's ammo. (*2)
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
@@ -40,3 +42,19 @@ BALANCE: You will need to install Debug Menu mod to properly balance the game wh
 - IMHO, to hacking minigame be fun, rewards should balanced and more rewarding (*1).
  + if you fail a hack attempt, explode an FIRE grenade on your feet. If you disconnect after the trace begins, throw and EMP grenade. Better face a wall first as we cant aim straight down to throw them.
  
+========================================= WORKAROUNDS: using DebugMenu mod
+
+- (*2) when you pickup a grenade launcher ammo, drop it and give self related normal grenades
+- (*3) when pick up a gun you have, give self proper parts amount (it is based on vanilla gun's width x10): 
+				10mm pistol: 30
+				Stun Gun: 30
+				Machine Pistol: 40
+				Combat Rifle: 50
+				Battle Rifle: 60
+				Lancer Rifle: 30
+				Tactical ShotGun: 50
+				DevastatorShotGun: 50
+				Sniper Rifle: 70
+				Grenade Launcher: 40
+				Cote Azur: 30
+				Tranquilizer Rifle: 70

@@ -14,3 +14,5 @@
  Q:unable to holster my gun?
  A:move away from where you are standing, some places prevent that like +- in front of the Bank...
  
+ Q:some containers are highlighted but wont open, why?
+ A:try to go thru the stealth path, it may have a trigger there that was tested by devs. Try to move all around, it may trigger something that fix the container.

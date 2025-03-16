@@ -15,7 +15,7 @@ declare -p fMinFreqDetected
 : ${fMinFreq:=${fMinFreqDetected}} #help your cpu minimum frequency (auto detected, but must be configured with visudo)
 while true;do
 	nTmpr=$(sensors |grep Tctl |awk '{print $2}' |cut -d. -f1);
-	: ${nTmprLim:=73} #help temperature limit to throttle CPU down
+	: ${nTmprLim:=76} #help temperature limit to throttle CPU down
 	if((nTmpr >= nTmprLim));then
 		date
 		declare -p nTmpr
@@ -25,7 +25,9 @@ while true;do
 		set +x 
 	fi
 	
-	echoc -w -t 3 -n "\r$(date)"
+	#echoc -w -t 3 -n "\r$(date)"
+	: ${nDelay:=2} #help
+	echo -en "\r$(date)";read -n 1 -t $nDelay
 	
 	: ${bExitWithGame:=false} #help
 	if $bExitWithGame && ! FUNCcheckIfGameIsRunning;then break;fi
