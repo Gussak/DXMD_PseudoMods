@@ -2,6 +2,7 @@ If there was proper mod tools, many of these could be easily implemented :)
 
 NPC INTERACTION
 - Let we give credits to beggars, their reaction could be to give like 25experience, or let them just thanks, or unlock access to someone in the sewers side quest.
+- Richard The Great: staying too long under his influence could create a "end of game" condition where the player would sit there and not leave. (*4)
 
 ITEMS INTERACTION
 - pick up items hightlight should have 3 choices: 0-nothing, 1-only consumables, 2-everything. Also, consumables should be highlighted in another color like yellow or custom. So many highlighted items in white is annoying.
@@ -17,6 +18,7 @@ COMBAT
 - regenerating health should consume battery energy the same amount and prevent batt regen for a short time as if a skill had been used
 - let grenade launcher ammo be converted into related grenades, so we dont need to carry the launcher but will still be able to use it's ammo. (*2)
 - shoot thru walls: just calc how far inside the wall the bullet will travel, if it is less than 0.10m, let it go thru, as long it is armor piercing. Sniper armor piercing bullets could go thru 0.25m. Reduce damage to 33% of max.
+- (*4) the device Richard uses to interfere in augmented ppl could become a gun used against the player (for a short time random aug disable for example) and that the player could use to debuff or control augmented ppl for a short time (like turrets and robots are hacked)
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
