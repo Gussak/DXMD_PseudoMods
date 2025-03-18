@@ -85,7 +85,9 @@ function FUNCrandomSoftwares() {
 	
 	for((i=1; i <= ${nLvl} ; i++));do
 		if((i==1));then
-			strFUNCrandomSoftwares+="${strEscGreenDim}$((i)): (YOU ALREADY GOT IT IN GAME)${_strEscEnd}\n";
+			nTotFound=$(( 1 * ((RANDOM%nMultSoft) + 1) )) # +1 because ex.: nMultSoft=10 so is 0to9 becomes 1to10
+			if((nTotFound<nLvl));then nTotFound=$nLvl;fi # minimum reward is the nLvl
+			strFUNCrandomSoftwares+="${strEscGreenDim}$((i)): (YOU ALREADY GOT IT IN GAME) but add more ${strEscGreenLight} $((nTotFound-1)) ${_strEscEnd}\n";
 			continue
 		else
 			if((  nLuck ==  1));then
