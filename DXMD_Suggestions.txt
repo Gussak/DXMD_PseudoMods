@@ -16,6 +16,7 @@ COMBAT
 - items on the environment, like big cardboxes or anything that a firearm could destroy should be destructible, so we would not be able to use as cover. Ok, the idea could be cardboxes may contain something strong inside, but some of them, or other things may be fragile.
 - regenerating health should consume battery energy the same amount and prevent batt regen for a short time as if a skill had been used
 - let grenade launcher ammo be converted into related grenades, so we dont need to carry the launcher but will still be able to use it's ammo. (*2)
+- shoot thru walls: just calc how far inside the wall the bullet will travel, if it is less than 0.10m, let it go thru, as long it is armor piercing. Sniper armor piercing bullets could go thru 0.25m. Reduce damage to 33% of max.
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
@@ -26,6 +27,7 @@ HACKING
 ENVIRONMENT
 - take damage if we step over any fire or any heat source, even the ones we can turn on/off like electric ovens. An open microwave oven if turned on should be a hazard.
 - double click the zoom in iron sights key while wielding no weapons, could eagle eye zoom like best sniper rifle scope (may be less :))
+- destructible computer terminals (bullet proof terminals if they contain main story quest data. Side quest ones could be resistant but not indestructible) and electronic lock terminals (bullet proof terminals if doors cannot be destroyed)
 
 =======================================
 
