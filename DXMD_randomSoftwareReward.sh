@@ -105,7 +105,9 @@ function FUNCrandomSoftwares() {
 		#nMatchCount="$(echo -e "$strFUNCrandomSoftwares" |egrep -ic "$strSoft")" #grep is slow
 		#if((nMatchCount>0));then
 		if((${aMatches[$strSoft]}>0));then
-			echo -e "${strEscGreen} $strSoft: ${strEscGreenLight}$(( ${aMatches[$strSoft]}*((RANDOM%nMultSoft)+1) ))${_strEscEnd}"
+			nTotFound=$(( ${aMatches[$strSoft]} * ((RANDOM%nMultSoft) + 1) )) # +1 because ex.: nMultSoft=10 so is 0to9 becomes 1to10
+			if((nTotFound<nLvl));then nTotFound=$nLvl;fi # minimum reward is the nLvl
+			echo -e "${strEscGreen} $strSoft: ${strEscGreenLight}${nTotFound}${_strEscEnd}"
 		else
 			echo -e "${strEscGreenDim} [***]${_strEscEnd}"
 		fi
