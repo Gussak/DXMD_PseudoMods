@@ -31,9 +31,7 @@ ENVIRONMENT
 - double click the zoom in iron sights key while wielding no weapons, could eagle eye zoom like best sniper rifle scope (may be less :))
 - destructible computer terminals (bullet proof terminals if they contain main story quest data. Side quest ones could be resistant but not indestructible) and electronic lock terminals (bullet proof terminals if doors cannot be destroyed)
 
-=======================================
-
-MOD: Fair and balanced gameplay INSTRUCTIONS
+======================================= MOD: IMHO Fair and balanced gameplay INSTRUCTIONS
 
 Why "instructions"? because we do not have tools to mod DeusEx properly. We can tweak binary files that fortunately are uncompressed, so there is still hope to modding but it is very difficult (to me at least) to guess the right byte offset to tweak, very time consuming too to make tests. TODO: May be try with Cheat Engine?
 These instructions/tips are how to play more satisfactorily in several ways.
@@ -45,7 +43,12 @@ COMBAT:
 BALANCE: You will need to install Debug Menu mod to properly balance the game while you play it.
 - IMHO, to hacking minigame be fun, rewards should balanced and more rewarding (*1).
  + if you fail a hack attempt, explode an FIRE grenade on your feet. If you disconnect after the trace begins, throw and EMP grenade. Better face a wall first as we cant aim straight down to throw them.
- 
+
+AUMENTATIONS:
+- do not get ICARUS, use Charged Dash instead, is much more challenging (despite makes it easier to climb up). That keeps high fall damage difficulty.
+- do not get TITAN if you think the combat is already too easy in hardest mode.
+- use debug menu to get praxis enough to buy hidden augs up to 400% overload that glitches the HUD many times while in combat, great fro chaotic cyberpunk roleplaying, but do not use them yet. Only use them after you get enough praxis points to buy them. To debit praxis later when you gain new ones, use CheatEngine or PINCE(linux) to determine the 4 memory locations where available praxis are stored so you can zero them. Just add a random big value of praxis to be easier to find the memory address, and reload the last savegame if you think you did something wrong.
+
 ========================================= WORKAROUNDS: using DebugMenu mod
 
 - (*2) when you pickup a grenade launcher ammo, drop it and give self related normal grenades

@@ -9,7 +9,7 @@ echo "This script will randomize softwares you could have found in game if it co
 echo "This script is a mini-game on it-self also."
 echo "USAGE: you can set options running like this: nFunWayMaxTimeoutPerLevel=3 strFunJackPotRegexMatch=\"FUNNY|CYBER\" ./$(basename "$0")"
 echo "TIP: I think it may work best with guake"
-echo "MINIGAME:Passwords: while decripting the database, select something from it and try to type it. If you miss a key you will fail. The more you type w/o missing, up to $nClipLim chars, will increase the good luck chance of finding best software. Completing the password will earn 2x it's value and retry good luck many times after it, more often if it was a big password. Tip: move the mose to slow down (max is node level * $nSlowDownLimMult) the processing so you can select something."
+echo "MINIGAME:Passwords: while decripting the database, select something from it, it will override any password input, but you have to try to type it much before the time ends. If you miss a key you will fail. The more you type w/o missing, up to $nClipLim chars, will increase the good luck chance of finding best software. Completing the password will earn 2x it's value and retry good luck many times after it, more often if it was a big password. Tip: move the mose to slow down (max is node level * $nSlowDownLimMult) the processing so you can select something."
 echo "SELFNOTE:TODO:FIX:ISSUE: typing the password too fast may fail by not reading some typed key :("
 echo
 echo "VARIABLE OPTIONS:"
@@ -46,12 +46,33 @@ aKey[Overclock]=O
 aKey[Datascan]=D
 aKey[Stop]=T
 
-_strEscGreenLight="\E[92m"
-_strEscGreen="\E[32m"
+#TODO cyan/blue theme, could use cyan and blue, more related colors!!! red and magenta could work well too.
+: ${strTheme:=cyan} #help color theme
+case "$strTheme" in
+	green) #help theme
+		_strEscGreenLight="\E[92m"
+		_strEscGreen="\E[32m"
+		_strEscBkgGreenLight="\E[102m"
+		;;
+	blue) #help theme. echo -e "\E[0m\E[34mAAA\E[0m\E[94mBBB\E[0m\E[94m\E[104mCCC\E[0m"
+		_strEscGreenLight="\E[94m"
+		_strEscGreen="\E[34m"
+		_strEscBkgGreenLight="\E[104m"
+		;;
+	cyan) #help theme. echo -e "\E[0m\E[36mAAA\E[0m\E[96mBBB\E[0m\E[96m\E[106mCCC\E[0m"
+		_strEscGreenLight="\E[96m"
+		_strEscGreen="\E[36m"
+		_strEscBkgGreenLight="\E[106m"
+		;;
+	red) #help theme.
+		_strEscGreenLight="\E[91m"
+		_strEscGreen="\E[31m"
+		_strEscBkgGreenLight="\E[101m"
+		;;
+esac
+_strEscBlink="\E[5m"
 _strEscDim="\E[2m"
 _strEscEnd="\E[0m"
-_strEscBkgGreenLight="\E[102m"
-_strEscBlink="\E[5m"
 
 strEscGreenDim="${_strEscEnd}${_strEscGreen}${_strEscDim}"
 strEscGreen="${_strEscEnd}${_strEscGreen}"
@@ -66,7 +87,7 @@ if ! $bColored;then
 fi
 
 function FUNCclearBuffer() { 
-	while read -n 1 -t 0.01;do :;done #clear key buffer
+	while read -r -n 1 -t 0.01;do :;done #clear key buffer
 }
 
 function FUNCrandomSoftwares() {
@@ -87,7 +108,7 @@ function FUNCrandomSoftwares() {
 		if((i==1));then
 			nTotFound=$(( 1 * ((RANDOM%nMultSoft) + 1) )) # +1 because ex.: nMultSoft=10 so is 0to9 becomes 1to10
 			if((nTotFound<nLvl));then nTotFound=$nLvl;fi # minimum reward is the nLvl
-			strFUNCrandomSoftwares+="${strEscGreenDim}$((i)): (YOU ALREADY GOT IT IN GAME) but add more ${strEscGreenLight} $((nTotFound-1)) ${_strEscEnd}\n";
+			strFUNCrandomSoftwares+="${strEscGreenDim}$((i)): (YOU ALREADY GOT IT) but add more ${strEscGreenLight} $((nTotFound-1)) ${strEscGreenDim}(select it here: ${astrSoftwareList[@]})${_strEscEnd}\n";
 			continue
 		else
 			if((  nLuck ==  1));then
@@ -159,7 +180,7 @@ while true;do
 		echo -e "$(printf %$(tput cols)s ' ' |tr ' ' '_')";
 		echo -e "${strEscGreenDim}[CONNECTED]"
 		echo -e "$strQ";
-		echo -e "${strEscGreenLight}";read -n 1 nLvl
+		echo -e "${strEscGreenLight}";read -r -n 1 nLvl
 	fi
 	if [[ "$nLvl" == "&" ]];then
 		nLvl=$((RANDOM%10 + 1));if((nLvl==1));then nLvl=2;fi
@@ -253,7 +274,7 @@ while true;do
 		
 		strFunCurrentChar="${strFunChars:$((RANDOM%${#strFunChars})):1}"
 		strFunProgress+="$strFunCurrentChar"
-		echo -e "${strEscGreen}PASSWORD[${nLuckAdd}/${#strClipboard}]: '${strClipboard}' ${strEscGreenLight}${strTryType}${strPasswordStatus} ${strEscGreenDim}(press '$strEndNowKey' to end now)"
+		echo -e "${strEscGreen}PASSWORD(OVERRIDE)[${nLuckAdd}/${#strClipboard}]: '${strClipboard}' ${strEscGreenLight}${strTryType}${strPasswordStatus} ${strEscGreenDim}(press '$strEndNowKey' to end now)"
 		echo -e "${strEscGreen}DECRIPTING DATABASE [timeout:$((SECONDS-nSeconds+1))s/${nFunWayTimeout}s][slowdowns:$nSlowDownCount/$nSlowDownLim]:${strEscGreen} [${#strFunProgress}]='${strFunCurrentChar}' ${strEscGreenDim}$strFunProgress${_strEscEnd}";
 		
 		if [[ "$strFunProgress" =~ (${strFunJackPotRegexMatch}) ]];then
@@ -274,7 +295,10 @@ while true;do
 		if ((nReadInputCountUp >= nReadInputLoopInterval));then
 			if ! $bPasswordCompleted && ! $bPasswordWrong;then
 				echo -n .;read -r -n 1 -t 0.001 strTryTypeChars >/dev/null;FUNCclearBuffer # will read the first char from the buffer!!! Must be the last thing to not break the above fast text printing. the user must type it and not paste so clear the buffer ;)
-				if [[ "$strTryTypeChars" == "${strEndNowKey}" ]];then break;fi
+				if [[ "$strTryTypeChars" == "${strEndNowKey}" ]];then
+					strTryTypeChars=""
+					break
+				fi
 				if(( nSlowDownCount < nSlowDownLim ));then
 					bSkipMouseMove=false
 					if [[ -z "$strCursorPos" ]];then bSkipMouseMove=true;fi #first only
@@ -315,9 +339,9 @@ while true;do
 		
 		if((nLuck!=0));then break;fi
 	done
-	echo -en "${strEscGreenDim}[DISCONNECTED]"
+	echo -en "${strEscGreenDim}[STEALTHLY DISCONNECTING]"
 	if ! $bDebugTestLuck;then
-		sleep 1;echo -n . # so user have a chance to stop typing challenge
+		sleep 1;echo -n . # so user have a chance to stop typing password challenge and avoid run the next by mistake before reading current one
 		sleep 1;echo -n .
 		sleep 1;echo -n .
 	fi

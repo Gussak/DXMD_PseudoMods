@@ -16,3 +16,18 @@
  
  Q:some containers are highlighted but wont open, why?
  A:try to go thru the stealth path, it may have a trigger there that was tested by devs. Try to move all around, it may trigger something that fix the container.
+ 
+ Q:debug menu options to add 50 and 100 credits, that worked initially, now only add 5 and 10? I use it to compensate not being able to take duplicate guns I gather from combats to vendor, here is the list of empty ammo gun's values from vendor Tars:
+	10mm pistol: 200
+	Stun Gun: 625
+	Machine Pistol: 300
+	Combat Rifle: 250
+	Battle Rifle: 750
+	Lancer Rifle: 1125
+	Tactical ShotGun: 750
+	DevastatorShotGun: 1125
+	Sniper Rifle: 1250
+	Grenade Launcher: 1500
+	Cote Azur: 1000
+	Tranquilizer Rifle: 
+ A:use a mouse with turbo click. Each second you hold it is like 10 clicks, so 100 credits. Now is easy, just count how many seconds you are trying to add 100xSeconds credits
