@@ -1,17 +1,22 @@
 #!/bin/bash
 
 astrItemList=(
+	BioCell
+	HYPO_STIMJECTOR
+	PainKiller
+	Multitool
+	
+	Absinthe
 	Beer_Beekmans_Brown_Ale
 	Beer_Changuch_Pale_Ale
 	Beer_Dait_Taga
 	Beer_Mramor_Pilsner
 	Beer_Svobody
-	BioCell
-	HYPO_STIMJECTOR
-	PainKiller
-	Shot_Nyes_Rye
-	Shot_Surly_Welshmans
-	Shot_Tensons_Sense
+	Whiskey__Nyes_Rye
+	Whiskey__Surly_Welshmans
+	Spirit_AKuma
+	Spirit_Prestige
+	Wine_Lavende
 )
 declare -A astrFound
 while true;do

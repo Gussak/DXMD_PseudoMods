@@ -46,9 +46,9 @@ BALANCE: You will need to install Debug Menu mod to properly balance the game wh
  + if you fail a hack attempt, explode an FIRE grenade on your feet. If you disconnect after the trace begins, throw and EMP grenade. Better face a wall first as we cant aim straight down to throw them.
 
 AUMENTATIONS:
-- do not get ICARUS, use Charged Dash instead, is much more challenging (despite makes it easier to climb up). That keeps high fall damage difficulty.
+- do not get ICARUS nor HIGHJUMP, use Charged Dash instead, is much more challenging (despite makes it easier to climb up). That keeps high fall damage difficulty.
 - do not get TITAN if you think the combat is already too easy in hardest mode.
-- use debug menu to get praxis enough to buy hidden augs up to 400% overload that glitches the HUD many times while in combat, great fro chaotic cyberpunk roleplaying, but do not use them yet. Only use them after you get enough praxis points to buy them. To debit praxis later when you gain new ones, use CheatEngine or PINCE(linux) to determine the 4 memory locations where available praxis are stored so you can zero them. Just add a random big value of praxis to be easier to find the memory address, and reload the last savegame if you think you did something wrong.
+- after Kollen, use all praxis to buy hidden augs up to 400% overload that glitches the HUD many times while in combat, great for chaotic cyberpunk roleplaying, but do not use them yet. Only use them after you get enough praxis points to buy them. To debit praxis later when you gain new ones, use CheatEngine or PINCE(linux) to determine the 4 memory locations where available praxis are stored so you can zero them. Just add a random big value of praxis to be easier to find the memory address, and reload the last savegame if you think you did something wrong.
 
 ========================================= WORKAROUNDS: using DebugMenu mod
 
