@@ -21,6 +21,7 @@ COMBAT
 - shoot thru walls: just calc how far inside the wall the bullet will travel, if it is less than 0.10m, let it go thru, as long it is armor piercing. Sniper armor piercing bullets could go thru 0.25m. Reduce damage to 33% of max.
 - (*4) the device Richard uses to interfere in augmented ppl could become a gun used against the player (for a short time random aug disable for example) and that the player could use to debuff or control augmented ppl for a short time (like turrets and robots are hacked)
 - Reaction time of law enforcers should be 0.25s. Thugs 0.25-0.5s. AICameras, AITurrets, AIRobots 0.1s. Civilians Vanilla 3s(?). Using Cloak augmentation (should have reaction too) 9s. Advanced Cloak 18s.
+- Drones should drop at least some ammo (*4)
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
@@ -32,6 +33,8 @@ ENVIRONMENT
 - take damage if we step over any fire or any heat source, even the ones we can turn on/off like electric ovens. An open microwave oven if turned on should be a hazard.
 - double click the zoom in iron sights key while wielding no weapons, could eagle eye zoom like best sniper rifle scope (may be less :))
 - destructible computer terminals (bullet proof terminals if they contain main story quest data. Side quest ones could be resistant but not indestructible) and electronic lock terminals (bullet proof terminals if doors cannot be destroyed)
+- thrown items that bounce in walls and hit the player, should cause damage too
+- barbed wire should cause damage when moving
 
 ======================================= MOD: IMHO Fair and balanced gameplay INSTRUCTIONS
 
@@ -67,3 +70,5 @@ AUMENTATIONS:
 				Grenade Launcher: 40
 				Cote Azur: 30
 				Tranquilizer Rifle: 70
+				TIP: scrolldown fast linux command QOL: xdotool click --delay 1 --repeat 50 5
+- (*4) give self 9mm regular ammo once per drone defeated after reaching it's destroyed parts
