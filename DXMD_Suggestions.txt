@@ -20,6 +20,7 @@ COMBAT
 - let grenade launcher ammo be converted into related grenades, so we dont need to carry the launcher but will still be able to use it's ammo. (*2)
 - shoot thru walls: just calc how far inside the wall the bullet will travel, if it is less than 0.10m, let it go thru, as long it is armor piercing. Sniper armor piercing bullets could go thru 0.25m. Reduce damage to 33% of max.
 - (*4) the device Richard uses to interfere in augmented ppl could become a gun used against the player (for a short time random aug disable for example) and that the player could use to debuff or control augmented ppl for a short time (like turrets and robots are hacked)
+- Reaction time of law enforcers should be 0.25s. Thugs 0.25-0.5s. AICameras, AITurrets, AIRobots 0.1s. Civilians Vanilla 3s(?). Using Cloak augmentation (should have reaction too) 9s. Advanced Cloak 18s.
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.

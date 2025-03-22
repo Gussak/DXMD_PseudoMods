@@ -1,0 +1,3 @@
+
+- ImHex has a binnary diff tool disabled by default at menu/view/diffing
+- In wxHexEditor we can adjust the width of shown hex data, and the data seems to align well with 12bytes (0123456789AB), so each data block seems to have 6 bytes, it may be some kind of data type control in 16bits followed by a 32bits value.
