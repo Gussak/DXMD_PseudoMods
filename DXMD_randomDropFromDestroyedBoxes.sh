@@ -1,22 +1,25 @@
 #!/bin/bash
 
-astrItemList=(
+astrItemListA=(
 	BioCell
 	HYPO_STIMJECTOR
-	PainKiller
+	PainKillerX3kit
 	Multitool
-	
+)
+astrItemListB=(
 	Absinthe
-	Beer_Beekmans_Brown_Ale
-	Beer_Changuch_Pale_Ale
-	Beer_Dait_Taga
-	Beer_Mramor_Pilsner
-	Beer_Svobody
 	Whiskey__Nyes_Rye
 	Whiskey__Surly_Welshmans
 	Spirit_AKuma
 	Spirit_Prestige
 	Wine_Lavende
+)
+astrItemListC=(
+	Beer_Beekmans_Brown_Ale
+	Beer_Changuch_Pale_Ale
+	Beer_Dait_Taga
+	Beer_Mramor_Pilsner
+	Beer_Svobody
 )
 declare -A astrFound
 while true;do
@@ -25,8 +28,14 @@ while true;do
 		astrFound[$str]=0
 	done
 	for((i=0;i<nCount;i++));do
-		if((RANDOM%100 < 5));then
-			((astrFound[${astrItemList[$((RANDOM % ${#astrItemList[*]}))]}]++))&&:
+		nRnd=$((RANDOM%100))&&:
+		declare -p nRnd
+		if((nRnd < 5));then
+			((astrFound[${astrItemListA[$((RANDOM % ${#astrItemListA[*]}))]}]++))&&:
+		elif((nRnd < 10));then
+			((astrFound[${astrItemListB[$((RANDOM % ${#astrItemListB[*]}))]}]++))&&:
+		elif((nRnd < 15));then
+			((astrFound[${astrItemListC[$((RANDOM % ${#astrItemListC[*]}))]}]++))&&:
 		fi
 	done
 	#for str in "${astrFound[@]}";do
