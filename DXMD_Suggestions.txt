@@ -35,6 +35,9 @@ ENVIRONMENT
 - destructible computer terminals (bullet proof terminals if they contain main story quest data. Side quest ones could be resistant but not indestructible) and electronic lock terminals (bullet proof terminals if doors cannot be destroyed)
 - thrown items that bounce in walls and hit the player, should cause damage too
 - barbed wire should cause damage when moving
+- Lifting heavy objects should spend a tiny amount of energy.
+- the radar minimap with enemies detection should be activatable and spend energy when active, but much less than xray aug
+- non pickupable destructible objects could hide behind them valuable pickupable items so we would have to shoot them to access the other ones
 
 ======================================= MOD: IMHO Fair and balanced gameplay INSTRUCTIONS
 
