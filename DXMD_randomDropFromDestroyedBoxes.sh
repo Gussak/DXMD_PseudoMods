@@ -24,7 +24,7 @@ astrItemListC=(
 declare -A astrFound
 while true;do
 	echo -n "how many boxes you destroyed? ";read nCount
-	for str in "${astrItemList[@]}";do
+	for str in "${astrItemListA[@]}" "${astrItemListB[@]}" "${astrItemListC[@]}";do
 		astrFound[$str]=0
 	done
 	for((i=0;i<nCount;i++));do
