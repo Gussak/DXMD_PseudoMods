@@ -23,7 +23,7 @@ astrItemListC=(
 )
 declare -A astrFound
 while true;do
-	echo -n "how many boxes you destroyed? ";read nCount
+	echo -n "how many card boxes you destroyed (each wooden box is worth 5 tho)? ";read nCount
 	for str in "${astrItemListA[@]}" "${astrItemListB[@]}" "${astrItemListC[@]}";do
 		astrFound[$str]=0
 	done
