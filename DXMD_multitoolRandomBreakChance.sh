@@ -13,6 +13,8 @@ while true;do
 	else
 		nBreakChance=$((nDiff*20))&&:
 	fi
+	if((nBreakChance>95));then nBreakChance=95;fi
+	
 	nRnd=$((RANDOM%100))&&:
 	if((nRnd < nBreakChance));then
 		echo "BREAK..."
@@ -20,7 +22,9 @@ while true;do
 		echo "The multitool resisted well."
 		((nResistCount++))&&:
 	fi
+	
 	declare -p nSkillLvl nLockLvl nDiff nBreakChance nRnd nResistCount
+	
 	echo
 done
 
