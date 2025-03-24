@@ -29,6 +29,7 @@ NAVIGATION
 
 HACKING
 - configurable data storage credits and software rewards. lvl 5 should be 5x more than lvl1 nodes, so from 100 to 500 credits and from 1 to 5 softwares, 5x more xp WORKAROUND in the shell script DXMD_randomSoftwareReward.sh (*1)
+- multitool should have a burn/break percent chance based on this: (lockLvl - augLvl) * 20. Minimum chance to break is 5% tho. so lvl 5 lock vs lvl 1 skill = 4*20 = 80% to burn the multitool, as it is possible to completely disable hacking aug would be 100% with skill lvl 0. So using multitool with a lock lvl LTE skill lvl, would never destroy it, so a skill lvl5 would almost not need to craft multitools.
 
 ENVIRONMENT
 - take damage if we step over any fire or any heat source, even the ones we can turn on/off like electric ovens. An open microwave oven if turned on should be a hazard.
@@ -40,6 +41,11 @@ ENVIRONMENT
 - the radar minimap with enemies detection should be activatable and spend energy when active, but less than xray aug like 50% of it. we should be able to set the zoom of it, high zoom consumes 33%, normal(vanilla) 66%, small zoom 100% as shows farer.
 - non pickupable destructible objects could hide behind them valuable pickupable items so we would have to shoot them to access the other ones
 - breaking walls should not be doable w/o energy, we can do it with 0 energy.
+- ceiling fan should cause damage if we reach it, and be destructible
+
+AUGS:
+- overload: glitches should have random interval
+- overload: every time a glitch happens, there should have 15% chance to damage HP for a tiny bit and damage energy the same (in my case I disabled energy regen, so that makes a difference)
 
 ======================================= MOD: IMHO Fair and balanced gameplay INSTRUCTIONS
 
