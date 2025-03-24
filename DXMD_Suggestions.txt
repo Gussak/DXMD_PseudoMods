@@ -42,6 +42,7 @@ ENVIRONMENT
 - non pickupable destructible objects could hide behind them valuable pickupable items so we would have to shoot them to access the other ones
 - breaking walls should not be doable w/o energy, we can do it with 0 energy.
 - ceiling fan should cause damage if we reach it, and be destructible
+- let we sit on chairs, sofas, lay on bed etc. eat food on the table.
 
 AUGS:
 - overload: glitches should have random interval
