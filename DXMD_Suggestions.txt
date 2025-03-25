@@ -3,6 +3,7 @@ If there was proper mod tools, many of these could be easily implemented :)
 NPC INTERACTION
 - Let we give credits to beggars, their reaction could be to give like 25experience, or let them just thanks, or unlock access to someone in the sewers side quest.
 - Richard The Great: staying too long under his influence could create a "end of game" condition where the player would sit there and not leave. (*4)
+- declining a sub quest from a talk, should lead to something still interesting and not just the absense of that quest
 
 ITEMS INTERACTION
 - pick up items hightlight should have 3 choices: 0-nothing, 1-only consumables, 2-everything. Also, consumables should be highlighted in another color like yellow or custom. So many highlighted items in white is annoying.
@@ -23,6 +24,7 @@ COMBAT
 - Reaction time of law enforcers should be 0.25s. Thugs 0.25-0.5s. AICameras, AITurrets, AIRobots 0.1s. Civilians Vanilla 3s(?). Using Cloak augmentation (should have reaction too) 9s. Advanced Cloak 18s.
 - Drones should drop at least some ammo (*4)
 - Random civilians could turn into armed hostiles and drop ammo like cops after defeat
+- Normal civilian deaths should give -100exp
 
 NAVIGATION
 - optional map fog, on every depth level, so we could know where we already walked thru, what places we visited, to make it less labiryntic to move thru maps, sewers etc, after all we have not the movement and positional sensation as IRL.
@@ -43,6 +45,7 @@ ENVIRONMENT
 - breaking walls should not be doable w/o energy, we can do it with 0 energy.
 - ceiling fan should cause damage if we reach it, and be destructible
 - let we sit on chairs, sofas, lay on bed etc. eat food on the table.
+- new achievement: find every destructible item in game and discover what happens when you shoot it xD
 
 AUGS:
 - overload: glitches should have random interval
@@ -84,3 +87,14 @@ AUMENTATIONS:
 				Tranquilizer Rifle: 70
 				TIP: scrolldown fast linux command QOL: xdotool click --delay 1 --repeat 50 5
 - (*4) give self 9mm regular ammo once per drone defeated after reaching it's destroyed parts
+
+======================================= non obvious TIPS
+
+- use laser sight on stun gun as it will only show the red dot if the stun bullet can reach that spot!
+- use silender with shotgun to blow open doors with less chance of being detected
+
+======================================= weirder thoghts 
+
+- may be it is possible to hook the destructible bed/table lamp on the player in a way that it becomes a movable light, or redirect the drone light to player, something like that
+- do not use 10mm gun to fight with regular bullets ammo. Add 10000 10mm reg ammo thru debug menu. put a silencer on it. upgrade it to max ammo and fire rate. use that gun as  chaotic pseudo lantern xD. But it only works if you shoot metal surfaces, and you can drop things that will work like mine template or stem chip! So, to not lose 10mm ammo found for combat, every 30 10mm give yourself one box with 30 9mm ammo.
+
