@@ -22,7 +22,9 @@ COMBAT
 - shoot thru walls: just calc how far inside the wall the bullet will travel, if it is less than 0.10m, let it go thru, as long it is armor piercing. Sniper armor piercing bullets could go thru 0.25m. Reduce damage to 33% of max.
 - (*4) the device Richard uses to interfere in augmented ppl could become a gun used against the player (for a short time random aug disable for example) and that the player could use to debuff or control augmented ppl for a short time (like turrets and robots are hacked)
 - Reaction time of law enforcers should be 0.25s. Thugs 0.25-0.5s. AICameras, AITurrets, AIRobots 0.1s. Civilians Vanilla 3s(?). Using Cloak augmentation (should have reaction too) 9s. Advanced Cloak 18s.
-- Drones should drop at least some ammo (*4)
+- Drones should drop at least some ammo (*5)
+- Robots should drop at least some ammo (*6), and should lethal kick us if we get near, and should shoot fast like drones and turrets or at least have almost perfect aim if player is far away. The small cubic place the robot cames from, could actually be a robot spawner 1/alarmReset.
+- Turrets should drop at least some ammo (*7)
 - Random civilians could turn into armed hostiles and drop ammo like cops after defeat
 - Normal civilian deaths should give -100exp
 
@@ -86,7 +88,9 @@ AUMENTATIONS:
 				Cote Azur: 30
 				Tranquilizer Rifle: 70
 				TIP: scrolldown fast linux command QOL: xdotool click --delay 1 --repeat 50 5
-- (*4) give self 9mm regular ammo once per drone defeated after reaching it's destroyed parts
+- (*5) give self 9mm regular ammo once per Drone defeated after reaching it's destroyed parts
+- (*6) give self 7.62mm regular ammo once per Robot defeated after reaching it's destroyed parts. If it shooted fast, it should be 5.56mm tho.
+- (*7) give self 10mm regular ammo once per Turret defeated after reaching it's destroyed parts
 
 ======================================= non obvious TIPS
 
