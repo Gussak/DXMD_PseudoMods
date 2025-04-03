@@ -2,6 +2,8 @@
 
 set -Eeu
 
+echo "Better run this before trying to hack because you may lose more than you have (up to more 3 if your lvl is 1 and lock is 5)."
+
 : ${nResistCount:=0} #help
 #: ${nSkillLvl:=0} #help required param
 echo -n "type your hacking skill lvl: ";read -n 1 nSkillLvl;echo
